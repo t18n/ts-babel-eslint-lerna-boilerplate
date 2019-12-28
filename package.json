@@ -1,0 +1,32 @@
+{
+  "name": "@turbothinh/ts-babel-lerna",
+  "private": true,
+  "author": {
+    "name": "Turbo",
+    "email": "turbothinh@gmail.com",
+    "url": "https://turbothinh.com"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "resolutions": {
+    "babel-core": "^7.0.0-bridge.0"
+  },
+  "scripts": {
+    "build": "lerna exec --parallel 'BABEL_ENV=build babel src --out-dir dist --source-maps --extensions .ts,.tsx --config-file ./babel.config.js --delete-dir-on-start --no-comments'"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.7",
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/preset-react": "^7.7.4",
+    "@babel/preset-typescript": "^7.7.7",
+    "@types/node": "^13.1.1",
+    "@types/react": "^16.9.17",
+    "babel-core": "7.0.0-bridge.0",
+    "lerna": "^3.20.0",
+    "react": "^16.12.0",
+    "styled-components": "^4.4.1",
+    "typescript": "^3.7.4"
+  }
+}

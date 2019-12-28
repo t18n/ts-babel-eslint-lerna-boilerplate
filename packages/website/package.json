@@ -1,0 +1,8 @@
+{
+  "name": "@turbothinh/ts-babel-lerna-website",
+  "private": true,
+  "scripts": {
+    "prebuild": "tsc",
+    "build": "BABEL_ENV=build babel src --out-dir dist --source-maps --extensions .ts,.tsx --delete-dir-on-start --config-file ../../babel.config.js --no-comments"
+  }
+}
