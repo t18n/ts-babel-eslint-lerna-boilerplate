@@ -1,7 +1,13 @@
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 module.exports = (api) => {
   api.cache(true);
 
   return {
+    globals: {
+      'ts-jest': {
+        extends: './babel.config.js',
+      },
+    },
     presets: [
       [
         '@babel/env',
